@@ -1,0 +1,20 @@
+const usuarioService = require('../services/usuario.service');
+
+const crear = async (req, res) =>{
+    try{
+        const usuario = await usuarioService.crearUsuario(req.body);
+        res.status(201).json(usuario);
+    }catch(error){
+        res.status(401).json({error: error.message});
+    }
+};
+
+const listar = async(req, res) =>{
+    const usuarios = await usuarioService.listarUsuarios();
+    res.json(usuarios);
+};
+
+module.exports = {
+    crear,
+    listar
+};
