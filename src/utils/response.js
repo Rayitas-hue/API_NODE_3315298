@@ -14,4 +14,4 @@ const errorResponse=(res,error,status=500)=>{
 module.exports = {
     successResponse,
     errorResponse
-}
+};

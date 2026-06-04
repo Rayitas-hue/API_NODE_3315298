@@ -7,6 +7,7 @@ const authRoutes = require('./routes/auth.routes');
 
 //Ruta de usuario
 const usuarioRoutes = require('./routes/usuario.routes');
+const institucionRoutes = require('./routes/institucion.routes');
 const app = express();
 const limiter = rateLimit({windowMs : 15 * 60 * 1000, max: 100});
 app.use(limiter);
@@ -16,8 +17,9 @@ app.use(morgan('dev'));
 //Middleware para JSON
 app.use(express.json());
 app.use('/api/auth',authRoutes);
-//Iniciamos la ruta de usuario
+//Iniciamos las rutas
 app.use('/api/usuarios', usuarioRoutes);
+app.use('/Api/instituciones', institucionRoutes);
 
 app.get('/',(req,res)=>{
     res.send('🆗API funcionando correctamente')
