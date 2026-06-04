@@ -15,4 +15,12 @@ router.post('/', [
     usuarioController.crear
 );
 router.get('/', [validarJWT, esAdminRole], usuarioController.listar);
+router.delete('/:id',[
+    validarJWT,
+    esAdminRole
+],usuarioController.eliminar);
+router.put('/:id',[
+    validarJWT,
+    esAdminRole
+],usuarioController.actualizar);
 module.exports = router;

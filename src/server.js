@@ -3,7 +3,7 @@ const app = require('./app');
 const sequelize = require('./config/database');
 const {crearSuperAdmin} = require('./seeders/superadmin.seed');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 
 sequelize.sync()
 .then(async()=>{

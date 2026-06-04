@@ -1,8 +1,7 @@
 const Usuario = require('../models/usuario.model');
-
-const { encriptarPassword } = require('../utils/bcrypt')
-
-const { generarJWT } = require('../utils/jwt')
+const bcrypt = require('bcryptjs');
+const { encriptarPassword } = require('../utils/bcrypt');
+const { generarJWT } = require('../utils/jwt');
 
 const registrar = async (data) => {
     const existeCorreo = await Usuario.findOne({

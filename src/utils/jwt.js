@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const generarJWT = (usuario) => {
-    return jwt.sing(
+    return jwt.sign(
         {
             uid: usuario.id,
             rol: usuario.rol

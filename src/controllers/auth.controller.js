@@ -10,7 +10,7 @@ const registro = async (req, res) => {
 };
 const login = async (req, res) => {
     try{
-        const usuario = await authService.login(
+        const data = await authService.login(
             req.body.correo,
             req.body.password
         );
@@ -21,7 +21,13 @@ const login = async (req, res) => {
         });
     }
 };
+
+const perfil = async(req,res)=>{
+    res.json({usuario:req.usuario});
+};
+
 module.exports = {
     registro,
-    login
+    login,
+    perfil
 };

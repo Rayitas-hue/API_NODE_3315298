@@ -9,7 +9,7 @@ const crearUsuarioValidator = [
     body('correo')
     .isEmail()
     .withMessage('Correo invalido'),    
-    body('Password')
+    body('password')
     .isLength({min: 8})
     .withMessage('Password mínimo 8 caracteres')    
 ];
