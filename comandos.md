@@ -1,4 +1,5 @@
 # comandos
+
 ## GIT
 
 | comando                        | función                    |
@@ -11,15 +12,18 @@
 | git push -u origin master      | sube los cambios           |
 
 ## RUTA
-``git remote add origin https://github.com/Rayitas-hue/API_NODE_3315298.git``
+
+`git remote add origin https://github.com/Rayitas-hue/API_NODE_3315298.git`
 
 ## NODE
+
 | comando | función                       |
 | ------- | ----------------------------- |
 | node -v | ver versión                   |
 | npm -v  | manejador de paquetes de node |
 
 ## TERMINAL
+
 | comando | función              |
 | ------- | -------------------- |
 | cd      | Cambio de directorio |
